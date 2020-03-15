@@ -9,7 +9,7 @@ instances = ec2.create_instances(
     MinCount=1,
     MaxCount=3,
     InstanceType='t2.micro',
-    KeyName='kanak'
+    KeyName='****'           #name of keyfile
 
 )
 
@@ -23,3 +23,5 @@ for ins in instances:
     ins.wait_until_running()
     list.append(ins)
     print(ins.public_ip_address, ins.instance_type)
+
+ 
